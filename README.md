@@ -1,2 +1,2 @@
 # Scrumdinger-SwiftUIOfficialAppleCourse
-The official learning course for SwiftUI
+The official Apple learning course for SwiftUI
