@@ -11,6 +11,10 @@
 		C42B7B402ABBADD100754090 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B7B3F2ABBADD100754090 /* MeetingView.swift */; };
 		C42B7B422ABBADD300754090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42B7B412ABBADD300754090 /* Assets.xcassets */; };
 		C42B7B452ABBADD300754090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42B7B442ABBADD300754090 /* Preview Assets.xcassets */; };
+		C47932EF2AC9E55500B26539 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47932EE2AC9E55500B26539 /* TrailingIconLabelStyle.swift */; };
+		C4B6F5992ABD172100F1EB71 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6F5982ABD172100F1EB71 /* Theme.swift */; };
+		C4C29A1A2AC0FC33001C4342 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C29A192AC0FC33001C4342 /* DailyScrum.swift */; };
+		C4C29A1C2AC0FD7C001C4342 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C29A1B2AC0FD7C001C4342 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		C42B7B3F2ABBADD100754090 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
 		C42B7B412ABBADD300754090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42B7B442ABBADD300754090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C47932EE2AC9E55500B26539 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		C4B6F5982ABD172100F1EB71 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C4C29A192AC0FC33001C4342 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
+		C4C29A1B2AC0FD7C001C4342 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				C42B7B3D2ABBADD100754090 /* ScrumdingerApp.swift */,
-				C42B7B3F2ABBADD100754090 /* MeetingView.swift */,
+				C47932EE2AC9E55500B26539 /* TrailingIconLabelStyle.swift */,
+				C4B6F5972ABD170E00F1EB71 /* Models */,
+				C4C29A1D2AC0FD86001C4342 /* Views */,
 				C42B7B412ABBADD300754090 /* Assets.xcassets */,
 				C42B7B432ABBADD300754090 /* Preview Content */,
 			);
@@ -65,6 +75,24 @@
 				C42B7B442ABBADD300754090 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4B6F5972ABD170E00F1EB71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4B6F5982ABD172100F1EB71 /* Theme.swift */,
+				C4C29A192AC0FC33001C4342 /* DailyScrum.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4C29A1D2AC0FD86001C4342 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4C29A1B2AC0FD7C001C4342 /* CardView.swift */,
+				C42B7B3F2ABBADD100754090 /* MeetingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C29A1A2AC0FC33001C4342 /* DailyScrum.swift in Sources */,
+				C47932EF2AC9E55500B26539 /* TrailingIconLabelStyle.swift in Sources */,
+				C4B6F5992ABD172100F1EB71 /* Theme.swift in Sources */,
 				C42B7B402ABBADD100754090 /* MeetingView.swift in Sources */,
 				C42B7B3E2ABBADD100754090 /* ScrumdingerApp.swift in Sources */,
+				C4C29A1C2AC0FD7C001C4342 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +312,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
