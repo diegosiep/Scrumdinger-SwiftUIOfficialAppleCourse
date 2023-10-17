@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct DetailView: View {
-    let scrum: DailyScrum
     
+    @Binding var scrum: DailyScrum
+    
+    @State private var editingScrum = DailyScrum.emptyScrum
     @State private var isPresentingEditView = false
     var body: some View {
         List {
@@ -66,7 +68,7 @@ struct DetailView: View {
         .sheet(isPresented: $isPresentingEditView, content: {
             if #available(iOS 16.0, *) {
                 NavigationStack {
-                    DetailEditView()
+                    DetailEditView(scrum: $editingScrum)
                         .navigationTitle(scrum.title)
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
@@ -77,13 +79,14 @@ struct DetailView: View {
                             ToolbarItem(placement: .confirmationAction) {
                                 Button("Done") {
                                     isPresentingEditView = false
+                                    scrum = editingScrum
                                 }
                             }
                         }
                 }
             } else {
                 NavigationView {
-                    DetailEditView()
+                    DetailEditView(scrum: $editingScrum)
                         .navigationTitle(scrum.title)
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
@@ -94,6 +97,7 @@ struct DetailView: View {
                             ToolbarItem(placement: .confirmationAction) {
                                 Button("Done") {
                                     isPresentingEditView = false
+                                    scrum = editingScrum
                                 }
                             }
                         }
@@ -103,6 +107,7 @@ struct DetailView: View {
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
+                editingScrum = scrum
             }
         }
         
@@ -112,12 +117,12 @@ struct DetailView: View {
 #Preview {
     if #available(iOS 16.0, *) {
         NavigationStack {
-            DetailView(scrum: DailyScrum.sampleData[0])
+            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
     } else {
         // Fallback on earlier versions
         NavigationView {
-            DetailView(scrum: DailyScrum.sampleData[0])
+            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
     }
 }
