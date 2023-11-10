@@ -16,7 +16,7 @@ struct DetailView: View {
     var body: some View {
         List {
             Section {
-                NavigationLink(destination: MeetingView()) {
+                NavigationLink(destination: MeetingView(scrum: $scrum)) {
                     Label(title: { Text("Start Meeting") }, icon: { Image(systemName: "timer") })
                         .accessibilityLabel("Tap to start meeting button")
                         .font(.headline)

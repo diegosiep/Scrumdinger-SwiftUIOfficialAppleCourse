@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScrumsView: View {
     @Binding var scrums: [DailyScrum]
+    let scrumTimer = ScrumTimer(lengthInMinutes: 10, attendees: [DailyScrum.Attendee(name: "Mary")])
     var body: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
@@ -20,7 +21,9 @@ struct ScrumsView: View {
                 }
                 .navigationTitle("Daily Scrums")
                 .toolbar {
-                    Button(action: {}) {
+                    Button(action: {
+                        scrumTimer.startScrum()
+                    }) {
                         Image(systemName: "plus")
                     }
                     .accessibilityLabel("New Scrum")
