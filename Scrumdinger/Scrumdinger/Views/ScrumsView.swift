@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScrumsView: View {
     @Binding var scrums: [DailyScrum]
+    @State private var isPresentingNewScrumView = false
     let scrumTimer = ScrumTimer(lengthInMinutes: 10, attendees: [DailyScrum.Attendee(name: "Mary")])
     var body: some View {
         if #available(iOS 16.0, *) {
@@ -22,12 +23,15 @@ struct ScrumsView: View {
                 .navigationTitle("Daily Scrums")
                 .toolbar {
                     Button(action: {
-                        scrumTimer.startScrum()
+                        isPresentingNewScrumView = true
                     }) {
                         Image(systemName: "plus")
                     }
                     .accessibilityLabel("New Scrum")
                 }
+            }
+            .sheet(isPresented: $isPresentingNewScrumView) {
+                NewScrumSheet(isPresentingNewScrumView: $isPresentingNewScrumView, scrums: $scrums)
             }
         } else {
             // Fallback on earlier versions
@@ -45,6 +49,9 @@ struct ScrumsView: View {
                     }
                     .accessibilityLabel("New Scrum")
                 }
+            }
+            .sheet(isPresented: $isPresentingNewScrumView) {
+                NewScrumSheet(isPresentingNewScrumView: $isPresentingNewScrumView, scrums: $scrums)
             }
         }
     }

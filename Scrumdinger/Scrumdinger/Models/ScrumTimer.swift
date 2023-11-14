@@ -129,7 +129,8 @@ final class ScrumTimer: ObservableObject {
     
     private func update() {
         Task { @MainActor in
-            guard let startDate, !timerStopped else { return }
+            guard let startDate, !timerStopped 
+            else { return }
             let secondsElapsed = Int(Date().timeIntervalSince1970 - startDate.timeIntervalSince1970)
             secondsElapsedForSpeaker = secondsElapsed
             self.secondsElapsed = secondsPerSpeaker * speakerIndex + secondsElapsedForSpeaker
@@ -139,7 +140,9 @@ final class ScrumTimer: ObservableObject {
                 changeToSpeaker(at: speakerIndex + 1)
                 speakerChangedAction?()
             }
-            
+            if secondsRemaining == 0 {
+                timer?.invalidate()
+            }
         }
         
     }
