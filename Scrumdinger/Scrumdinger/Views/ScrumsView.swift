@@ -42,18 +42,25 @@ struct ScrumsView: View {
                     }
                     .listRowBackground(scrum.theme.mainColor)
                 }
+                
                 .navigationTitle("Daily Scrums")
                 .toolbar {
-                    Button(action: {}) {
+                    Button(action: {
+                        isPresentingNewScrumView = true
+                    }) {
                         Image(systemName: "plus")
                     }
                     .accessibilityLabel("New Scrum")
                 }
+               
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .sheet(isPresented: $isPresentingNewScrumView) {
                 NewScrumSheet(isPresentingNewScrumView: $isPresentingNewScrumView, scrums: $scrums)
             }
+            
         }
+        
     }
 }
 

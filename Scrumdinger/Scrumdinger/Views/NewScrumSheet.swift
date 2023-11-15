@@ -48,6 +48,7 @@ struct NewScrumSheet: View {
                         }
                     })
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

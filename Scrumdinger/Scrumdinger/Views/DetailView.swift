@@ -47,7 +47,7 @@ struct DetailView: View {
                             .padding(4)
                             .foregroundStyle(scrum.theme.accentColor)
                             .background(scrum.theme.mainColor)
-                            .cornerRadius(4)    
+                            .cornerRadius(4)
                     }
                     .accessibilityElement(children: .combine)
                 }
@@ -62,7 +62,21 @@ struct DetailView: View {
             } header: {
                 Text("Attendees")
             }
-
+            Section {
+                if scrum.history.isEmpty {
+                    Label("No meetings yet", systemImage: "calendar.badge.exclamation")
+                }
+                ForEach(scrum.history) { history in
+                    HStack {
+                        Image(systemName: "calendar")
+                        Text(history.date, style: .date)
+                    }
+                }
+            } header: {
+                Text("History")
+            }
+            
+            
         }
         .navigationTitle(scrum.title)
         .sheet(isPresented: $isPresentingEditView, content: {
@@ -102,6 +116,7 @@ struct DetailView: View {
                             }
                         }
                 }
+                .navigationViewStyle(StackNavigationViewStyle())
             }
         })
         .toolbar {
@@ -124,5 +139,6 @@ struct DetailView: View {
         NavigationView {
             DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
