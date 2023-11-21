@@ -27,6 +27,7 @@
 		C4E9E6F02AD71ECF00549E3F /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E9E6EF2AD71ECF00549E3F /* ThemePicker.swift */; };
 		C4EF13DE2AFEF27700492723 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4EF13DD2AFEF27700492723 /* ding.wav */; };
 		C4EF13E02AFEF2D300492723 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EF13DF2AFEF2D300492723 /* AVPlayer+Ding.swift */; };
+		C4F901892B058A9D00CC6FD3 /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F901882B058A9D00CC6FD3 /* ScrumStore.swift */; };
 		C4F95D9D2AD0DE0700718071 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F95D9C2AD0DE0700718071 /* DetailEditView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		C4E9E6EF2AD71ECF00549E3F /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		C4EF13DD2AFEF27700492723 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ding.wav; path = ../../../../../Downloads/ManagingStateAndLifeCycle/StartingProject/Scrumdinger/Resources/ding.wav; sourceTree = "<group>"; };
 		C4EF13DF2AFEF2D300492723 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
+		C4F901882B058A9D00CC6FD3 /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
 		C4F95D9C2AD0DE0700718071 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				C4EF13DF2AFEF2D300492723 /* AVPlayer+Ding.swift */,
 				C4C29A192AC0FC33001C4342 /* DailyScrum.swift */,
 				C456445B2B048D3B008B30DB /* History.swift */,
+				C4F901882B058A9D00CC6FD3 /* ScrumStore.swift */,
 				C4B767532AF1809400EA40B8 /* ScrumTimer.swift */,
 				C4B6F5982ABD172100F1EB71 /* Theme.swift */,
 			);
@@ -219,6 +222,7 @@
 				C43CAE252AF8722F0011F4F3 /* MeetingFooterView.swift in Sources */,
 				C4B767542AF1809400EA40B8 /* ScrumTimer.swift in Sources */,
 				C4C29A1A2AC0FC33001C4342 /* DailyScrum.swift in Sources */,
+				C4F901892B058A9D00CC6FD3 /* ScrumStore.swift in Sources */,
 				C4770ED22ACA24EF00B459E4 /* DetailView.swift in Sources */,
 				C426C8042AF00C55007D5AB7 /* MeetingHeaderView.swift in Sources */,
 				C4F95D9D2AD0DE0700718071 /* DetailEditView.swift in Sources */,
